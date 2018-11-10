@@ -1,5 +1,0 @@
-C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Classes\bin\Debug\Classes.dll
-C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Classes\bin\Debug\Classes.pdb
-C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Classes\obj\Debug\Models.csproj.CoreCompileInputs.cache
-C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Classes\obj\Debug\Classes.dll
-C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Classes\obj\Debug\Classes.pdb
