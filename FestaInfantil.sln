@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{792262EE-CE1C-4189-AA7C-B6EB1A4EF030}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Classes\Models.csproj", "{792262EE-CE1C-4189-AA7C-B6EB1A4EF030}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
