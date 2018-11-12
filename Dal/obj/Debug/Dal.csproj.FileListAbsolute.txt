@@ -1,0 +1,2 @@
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Dal\obj\Debug\Dal.csprojAssemblyReference.cache
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Dal\obj\Debug\Dal.csproj.CoreCompileInputs.cache

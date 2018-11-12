@@ -1,0 +1,71 @@
+CREATE TABLE TbAdministrador (
+  idAdministrador INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  TbUsuario_idUsuario INTEGER UNSIGNED NOT NULL,
+  login VARCHAR(20) NOT NULL,
+  senha VARCHAR(12) NOT NULL,
+  PRIMARY KEY(idAdministrador, TbUsuario_idUsuario),
+  INDEX TbAdministrador_FKIndex1(TbUsuario_idUsuario)
+);
+
+CREATE TABLE TbAluguel (
+  idAluguel INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  TbAtendente_idAtendente INTEGER UNSIGNED NOT NULL,
+  TbTema_idTema INTEGER UNSIGNED NOT NULL,
+  nomeCliente VARCHAR(50) NOT NULL,
+  enderecoCliente VARCHAR(50) NOT NULL,
+  dataFesta DATE NOT NULL,
+  horaInicio VARCHAR(5) NOT NULL,
+  horaFim VARCHAR(5) NOT NULL,
+  numeroPessoas INTEGER UNSIGNED NOT NULL,
+  temaFesta VARCHAR(20) NOT NULL,
+  PRIMARY KEY(idAluguel),
+  INDEX TbAluguel_FKIndex1(TbTema_idTema),
+  INDEX TbAluguel_FKIndex2(TbAtendente_idAtendente)
+);
+
+CREATE TABLE TbAtendente (
+  idAtendente INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  TbUsuario_idUsuario INTEGER UNSIGNED NOT NULL,
+  login VARCHAR(20) NOT NULL,
+  senha VARCHAR(12) NOT NULL,
+  PRIMARY KEY(idAtendente, TbUsuario_idUsuario),
+  INDEX TbAtendente_FKIndex1(TbUsuario_idUsuario)
+);
+
+CREATE TABLE TbCliente (
+  idCliente INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  TbUsuario_idUsuario INTEGER UNSIGNED NOT NULL,
+  TbAluguel_idAluguel INTEGER UNSIGNED NOT NULL,
+  login VARCHAR(20) NOT NULL,
+  senha VARCHAR(12) NOT NULL,
+  PRIMARY KEY(idCliente, TbUsuario_idUsuario),
+  INDEX TbCliente_FKIndex1(TbUsuario_idUsuario),
+  INDEX TbCliente_FKIndex2(TbAluguel_idAluguel)
+);
+
+CREATE TABLE TbItensTema (
+  idItensTema INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  TbTema_idTema INTEGER UNSIGNED NOT NULL,
+  nomeDoItem VARCHAR(20) NOT NULL,
+  valorDoItem FLOAT NOT NULL,
+  PRIMARY KEY(idItensTema),
+  INDEX TbItensTema_FKIndex1(TbTema_idTema)
+);
+
+CREATE TABLE TbTema (
+  idTema INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  temaFesta VARCHAR(20) NOT NULL,
+  corToalhaMesa VARCHAR(20) NOT NULL,
+  PRIMARY KEY(idTema)
+);
+
+CREATE TABLE TbUsuario (
+  idUsuario INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  nomeUsuario VARCHAR(45) NOT NULL,
+  cpf VARCHAR(15) NOT NULL,
+  telefone INTEGER UNSIGNED NOT NULL,
+  privilegio INTEGER UNSIGNED NOT NULL,
+  endereco VARCHAR(255) NOT NULL,
+  PRIMARY KEY(idUsuario)
+);
+
