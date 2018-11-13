@@ -11,7 +11,7 @@ namespace FestaInfantil.Dal
 {
     public class UsuarioDal
     {
-        public void Incluir(Usuarios usuarios)
+        public void Incluir(Usuario usuario)
 
         {
 
@@ -28,16 +28,16 @@ namespace FestaInfantil.Dal
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "insert into TbUsuarios(nomeUsuario,cpf,telefone,privilegio,endereco) values (@nomeUsuario,@cpf,@telefone,@privilegios,@endereco);";
-                cmd.Parameters.AddWithValue("@nomeUsuario", usuarios.Nome);
-                cmd.Parameters.AddWithValue("@cpf", usuarios.Cpf);
-                cmd.Parameters.AddWithValue("@telefone", usuarios.Telefone);
-                cmd.Parameters.AddWithValue("@privilegio", usuarios.Privilegio);
-                cmd.Parameters.AddWithValue("@endereco", usuarios.Endereco);
+                cmd.CommandText = "insert into TbUsuario(nomeUsuario,cpf,telefone,privilegio,endereco) values (@nomeUsuario,@cpf,@telefone,@privilegios,@endereco);";
+                cmd.Parameters.AddWithValue("@nomeUsuario", usuario.Nome);
+                cmd.Parameters.AddWithValue("@cpf", usuario.Cpf);
+                cmd.Parameters.AddWithValue("@telefone", usuario.Telefone);
+                cmd.Parameters.AddWithValue("@privilegio", usuario.Privilegio);
+                cmd.Parameters.AddWithValue("@endereco", usuario.Endereco);
 
                 cn.Open();
 
-                usuarios.Id = Convert.ToInt32(cmd.ExecuteScalar());
+                usuario.Id = Convert.ToInt32(cmd.ExecuteScalar());
             }
 
             catch (SqlException ex)
@@ -53,7 +53,7 @@ namespace FestaInfantil.Dal
                 cn.Close();
             }
         }
-        public void Alterar(Usuarios usuarios)
+        public void Alterar(Usuario usuario)
         {
             // conexao
             SqlConnection cn = new SqlConnection();
@@ -64,13 +64,13 @@ namespace FestaInfantil.Dal
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update TbUsuarios set nome = @nomeUsuario, cpf = @cpf, telefone = @telefone, privilegio = @privilegio, endereco = @endereco where idUsuarios = @idUsuarios;";
-                cmd.Parameters.AddWithValue("@idUsuarios", usuarios.Id);
-                cmd.Parameters.AddWithValue("@nomeUsuario", usuarios.Nome);
-                cmd.Parameters.AddWithValue("@cpf", usuarios.Cpf);
-                cmd.Parameters.AddWithValue("@telefone", usuarios.Telefone);
-                cmd.Parameters.AddWithValue("@privilegio", usuarios.Privilegio);
-                cmd.Parameters.AddWithValue("@endereco", usuarios.Endereco);
+                cmd.CommandText = "update TbUsuario set nome = @nomeUsuario, cpf = @cpf, telefone = @telefone, privilegio = @privilegio, endereco = @endereco where idUsuario = @idUsuario;";
+                cmd.Parameters.AddWithValue("@idUsuario", usuario.Id);
+                cmd.Parameters.AddWithValue("@nomeUsuario", usuario.Nome);
+                cmd.Parameters.AddWithValue("@cpf", usuario.Cpf);
+                cmd.Parameters.AddWithValue("@telefone", usuario.Telefone);
+                cmd.Parameters.AddWithValue("@privilegio", usuario.Privilegio);
+                cmd.Parameters.AddWithValue("@endereco", usuario.Endereco);
 
                 cn.Open();
 
@@ -104,7 +104,7 @@ namespace FestaInfantil.Dal
                 //command
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "delete from TbUsuarios where idUsuarios = " + id;
+                cmd.CommandText = "delete from TbUsuario where idUsuario = " + id;
 
                 cn.Open();
                 int resultado = cmd.ExecuteNonQuery();
@@ -132,7 +132,7 @@ namespace FestaInfantil.Dal
         public DataTable Listagem()
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select * from TbUsuarios", Dados.StringDeConexao);
+            SqlDataAdapter da = new SqlDataAdapter("select * from TbUsuario", Dados.StringDeConexao);
             da.Fill(tabela);
             return tabela;
         }

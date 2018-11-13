@@ -6,21 +6,37 @@ using System.Threading.Tasks;
 
 namespace FestaInfantil.Models
 {
-    public class Usuarios
+    public class Usuario
     {
         private int id;
         private string nome;
         private string cpf;
-        private int telefone;
+        private string telefone;
         private int privilegio;
         private string endereco;
+        private string login;
+        private string senha;
 
-        //construtores
-        public Usuarios()
+        public string Senha
+        {
+            get { return senha; }
+            set { senha = value; }
+        }
+
+
+        public string Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
+
+
+        //construtores 1
+        public Usuario()
         {
         }
 
-        public Usuarios(int id, string nome, string cpf, int telefone, int privilegio, string endereco)
+        public Usuario(int id, string nome, string cpf, string telefone, int privilegio, string endereco, string login, string senha)
         {
             this.id = id;
             this.nome = nome;
@@ -28,6 +44,8 @@ namespace FestaInfantil.Models
             this.telefone = telefone;
             this.privilegio = privilegio;
             this.endereco = endereco;
+            this.login = login;
+            this.senha = senha;
         }
 
         //gets e sets
@@ -45,7 +63,7 @@ namespace FestaInfantil.Models
         }
 
 
-        public int Telefone
+        public string Telefone
         {
             get { return telefone; }
             set { telefone = value; }
