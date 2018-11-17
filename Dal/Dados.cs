@@ -6,20 +6,14 @@ using System.Threading.Tasks;
 
 namespace FestaInfantil.Dal
 {
-    class Dados
+    public class Dados
     {
         public static string StringDeConexao
-
         {
-
             get
             {
-
-                return "";
-
+                return "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=BDLojaInfantil;Data Source=DESKTOP-V02ORJ2\\SQLEXPRESS01";
             }
-
         }
-
     }
 }

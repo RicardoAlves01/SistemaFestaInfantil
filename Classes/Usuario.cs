@@ -17,19 +17,7 @@ namespace FestaInfantil.Models
         private string login;
         private string senha;
 
-        public string Senha
-        {
-            get { return senha; }
-            set { senha = value; }
-        }
-
-
-        public string Login
-        {
-            get { return login; }
-            set { login = value; }
-        }
-
+        
 
         //construtores 1
         public Usuario()
@@ -49,6 +37,20 @@ namespace FestaInfantil.Models
         }
 
         //gets e sets
+
+        public string Senha
+        {
+            get { return senha; }
+            set { senha = value; }
+        }
+
+
+        public string Login
+        {
+            get { return login; }
+            set { login = value; }
+        }
+
         public string Endereco
         {
             get { return endereco; }

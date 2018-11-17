@@ -25,15 +25,18 @@ namespace FestaInfantil.Dal
                 cn.ConnectionString = Dados.StringDeConexao;
 
                 //command
-
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "insert into TbUsuario(nomeUsuario,cpf,telefone,privilegio,endereco) values (@nomeUsuario,@cpf,@telefone,@privilegios,@endereco);";
+                cmd.CommandText = "insert into TbUsuario(TbPrivilegio_idPrivilegio, nomeUsuario,cpf,telefone,endereco, login, senha) " +
+                    "values (@privilegio, @nomeUsuario,@cpf,@telefone,@endereco, @login, @senha); select @@IDENTITY;";
+
+                cmd.Parameters.AddWithValue("@privilegio", usuario.Privilegio);
                 cmd.Parameters.AddWithValue("@nomeUsuario", usuario.Nome);
                 cmd.Parameters.AddWithValue("@cpf", usuario.Cpf);
                 cmd.Parameters.AddWithValue("@telefone", usuario.Telefone);
-                cmd.Parameters.AddWithValue("@privilegio", usuario.Privilegio);
                 cmd.Parameters.AddWithValue("@endereco", usuario.Endereco);
+                cmd.Parameters.AddWithValue("@login", usuario.Login);
+                cmd.Parameters.AddWithValue("@senha", usuario.Senha);
 
                 cn.Open();
 
@@ -64,13 +67,17 @@ namespace FestaInfantil.Dal
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update TbUsuario set nome = @nomeUsuario, cpf = @cpf, telefone = @telefone, privilegio = @privilegio, endereco = @endereco where idUsuario = @idUsuario;";
-                cmd.Parameters.AddWithValue("@idUsuario", usuario.Id);
+                cmd.CommandText = "update TbUsuario set TbPrivilegio_idPrivilegio = @idPrivilegio, nome = @nomeUsuario, cpf = @cpf, " +
+               "telefone = @telefone, endereco = @endereco, login = @login, senha = @senha where idUsuario = @idUsuario;";
+
+                cmd.Parameters.AddWithValue("@idPrivilegio", usuario.Privilegio);
                 cmd.Parameters.AddWithValue("@nomeUsuario", usuario.Nome);
                 cmd.Parameters.AddWithValue("@cpf", usuario.Cpf);
                 cmd.Parameters.AddWithValue("@telefone", usuario.Telefone);
-                cmd.Parameters.AddWithValue("@privilegio", usuario.Privilegio);
                 cmd.Parameters.AddWithValue("@endereco", usuario.Endereco);
+                cmd.Parameters.AddWithValue("@login", usuario.Login);
+                cmd.Parameters.AddWithValue("@senha", usuario.Senha);
+                cmd.Parameters.AddWithValue("@idUsuario", usuario.Id);
 
                 cn.Open();
 
@@ -104,9 +111,16 @@ namespace FestaInfantil.Dal
                 //command
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
+
+                //talvez alinha 117 ficasse melhor assim: 
+
+                //cmd.CommandText = "delete from TbUsuario where idUsuario = @id;";
+                //cmd.Parameters.AddWithValue("@id", id);
+
                 cmd.CommandText = "delete from TbUsuario where idUsuario = " + id;
 
                 cn.Open();
+
                 int resultado = cmd.ExecuteNonQuery();
                 if (resultado != 1)
                 {
@@ -129,12 +143,29 @@ namespace FestaInfantil.Dal
             }
         }
 
-        public DataTable Listagem()
+        public DataTable ListagemUsuarios()
         {
             DataTable tabela = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("select * from TbUsuario", Dados.StringDeConexao);
             da.Fill(tabela);
             return tabela;
+        }
+
+        public DataTable ListaDePrivilegios
+        {
+            get
+            {
+                SqlConnection cn = new SqlConnection();
+                cn.ConnectionString = Dados.StringDeConexao;
+                cn.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter("select * from TbPrivilegio", cn);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                cn.Close();
+                return dt;
+            }
         }
     }
 }

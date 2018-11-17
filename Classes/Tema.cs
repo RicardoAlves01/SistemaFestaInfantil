@@ -8,6 +8,7 @@ namespace FestaInfantil.Models
 {
     public class Tema
     {
+        private int idTema;
         private string temaFesta;
         private string corToalhaMesa;
 
@@ -16,13 +17,21 @@ namespace FestaInfantil.Models
         {
         }
 
-        public Tema(string temaFesta, string corToalhaMesa)
+        public Tema(int idTema, string temaFesta, string corToalhaMesa)
         {
+            this.idTema = idTema;
             this.temaFesta = temaFesta;
             this.corToalhaMesa = corToalhaMesa;
         }
 
+
         //gets e sets
+        public int IdTema
+        {
+            get { return idTema; }
+            set { idTema = value; }
+        }
+
         public string CorToalhaMesa
         {
             get { return corToalhaMesa; }

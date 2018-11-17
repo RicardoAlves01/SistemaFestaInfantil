@@ -30,7 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Classes">
+    <Reference Include="Classes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Classes\bin\Debug\Classes.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -43,8 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AluguelDal.cs" />
     <Compile Include="Dados.cs" />
+    <Compile Include="ItensTemaDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemaDal.cs" />
     <Compile Include="UsuarioDal.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

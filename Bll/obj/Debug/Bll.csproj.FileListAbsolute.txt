@@ -1,0 +1,11 @@
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\obj\Debug\Bll.csprojAssemblyReference.cache
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\obj\Debug\Bll.csproj.CoreCompileInputs.cache
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\bin\Debug\Bll.dll
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\bin\Debug\Bll.pdb
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\bin\Debug\Classes.dll
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\bin\Debug\Dal.dll
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\bin\Debug\Classes.pdb
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\bin\Debug\Dal.pdb
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\obj\Debug\Bll.csproj.CopyComplete
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\obj\Debug\Bll.dll
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\Bll\obj\Debug\Bll.pdb

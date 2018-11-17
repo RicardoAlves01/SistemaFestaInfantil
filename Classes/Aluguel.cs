@@ -8,33 +8,57 @@ namespace FestaInfantil.Models
 {
     public class Aluguel
     {
-        private string nomeCliente;
-        private string enderecoCliente;
-        private float valorAluguel;
+        private int idAluguel;
+        private int idUsuario;
+        private int idTema;
+        private string enderecoUsuario;
         private DateTime dataFesta;
         private string horaInicio;
         private string horaFim;
         private int numeroPessoas;
         private string temaFesta;
+        private float valorAluguel;
 
         //construtores
-        public Aluguel(string nomeCliente, string enderecoCliente, float valorAluguel, DateTime dataFesta, string horaInicio, string horaFim, int numeroPessoas, string temaFesta)
+        public Aluguel()
         {
-            this.nomeCliente = nomeCliente;
-            this.enderecoCliente = enderecoCliente;
-            this.valorAluguel = valorAluguel;
+        }
+
+        public Aluguel(int idAluguel, int idUsuario, int idTema, string enderecoUsuario, DateTime dataFesta, string horaInicio, string horaFim, int numeroPessoas, string temaFesta, float valorAluguel)
+        {
+            this.idAluguel = idAluguel;
+            this.idUsuario = idUsuario;
+            this.idTema = idTema;
+            this.enderecoUsuario = enderecoUsuario;
             this.dataFesta = dataFesta;
             this.horaInicio = horaInicio;
             this.horaFim = horaFim;
             this.numeroPessoas = numeroPessoas;
             this.temaFesta = temaFesta;
-        }
-
-        public Aluguel()
-        {
+            this.valorAluguel = valorAluguel;
         }
 
         //gets e sets
+
+        public int IdAluguel
+        {
+            get { return idAluguel; }
+            set { idAluguel = value; }
+        } 
+
+        public int IdTema
+        {
+            get { return idTema; }
+            set { idTema = value; }
+        }
+
+
+        public int IdUsuario
+        {
+            get { return idUsuario; }
+            set { idUsuario = value; }
+        }
+
         public string TemaFesta
         {
             get { return temaFesta; }
@@ -74,16 +98,10 @@ namespace FestaInfantil.Models
         }
 
 
-        public string EnderecoCliente
+        public string EnderecoUsuario
         {
-            get { return enderecoCliente; }
-            set { enderecoCliente = value; }
-        }
-
-        public string NomeCliente
-        {
-            get { return nomeCliente; }
-            set { nomeCliente = value; }
+            get { return enderecoUsuario; }
+            set { enderecoUsuario = value; }
         }
     }
 }

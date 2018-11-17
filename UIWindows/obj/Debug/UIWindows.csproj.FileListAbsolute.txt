@@ -1,0 +1,16 @@
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\bin\Debug\UIWindows.exe.config
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\bin\Debug\UIWindows.exe
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\bin\Debug\UIWindows.pdb
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\obj\Debug\UIWindows.csprojAssemblyReference.cache
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\obj\Debug\FestaInfantil.UIWindows.Form1.resources
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\obj\Debug\UIWindows.Properties.Resources.resources
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\obj\Debug\UIWindows.UsuarioForm.resources
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\obj\Debug\UIWindows.csproj.GenerateResource.cache
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\obj\Debug\UIWindows.csproj.CoreCompileInputs.cache
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\obj\Debug\UIWindows.exe
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\obj\Debug\UIWindows.pdb
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\bin\Debug\Classes.dll
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\bin\Debug\Classes.pdb
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\obj\Debug\UIWindows.csproj.CopyComplete
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\bin\Debug\Dal.dll
+C:\Users\ricar\Documents\Ricardo Alves - Documentos\DOCTUM RICARDO\2 PERIODO\PROJETO_LOJA_POO_FESTAS\UIWindows\bin\Debug\Dal.pdb
