@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bll">
+      <HintPath>..\Bll\bin\Debug\Bll.dll</HintPath>
+    </Reference>
     <Reference Include="Classes">
       <HintPath>..\Classes\bin\Debug\Classes.dll</HintPath>
     </Reference>

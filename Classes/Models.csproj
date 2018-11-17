@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aluguel.cs" />
+    <Compile Include="HashValueSenha.cs" />
     <Compile Include="ItensTema.cs" />
     <Compile Include="Tema.cs" />
     <Compile Include="Usuario.cs" />

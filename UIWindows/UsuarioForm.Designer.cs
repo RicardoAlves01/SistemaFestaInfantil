@@ -41,7 +41,7 @@
             this.CPFTextBox = new System.Windows.Forms.TextBox();
             this.TelefoneTextBox = new System.Windows.Forms.TextBox();
             this.EnderecoTextBox = new System.Windows.Forms.TextBox();
-            this.loginTextBox = new System.Windows.Forms.TextBox();
+            this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.SenhaTextBox = new System.Windows.Forms.TextBox();
             this.cmbPrivilegio = new System.Windows.Forms.ComboBox();
             this.btnLimpar = new System.Windows.Forms.Button();
@@ -162,12 +162,12 @@
             this.EnderecoTextBox.Size = new System.Drawing.Size(253, 20);
             this.EnderecoTextBox.TabIndex = 13;
             // 
-            // loginTextBox
+            // LoginTextBox
             // 
-            this.loginTextBox.Location = new System.Drawing.Point(430, 93);
-            this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(100, 20);
-            this.loginTextBox.TabIndex = 14;
+            this.LoginTextBox.Location = new System.Drawing.Point(430, 93);
+            this.LoginTextBox.Name = "LoginTextBox";
+            this.LoginTextBox.Size = new System.Drawing.Size(100, 20);
+            this.LoginTextBox.TabIndex = 14;
             // 
             // SenhaTextBox
             // 
@@ -183,9 +183,9 @@
             this.cmbPrivilegio.FormattingEnabled = true;
             this.cmbPrivilegio.Location = new System.Drawing.Point(280, 40);
             this.cmbPrivilegio.Name = "cmbPrivilegio";
-            this.cmbPrivilegio.Size = new System.Drawing.Size(102, 21);
+            this.cmbPrivilegio.Size = new System.Drawing.Size(240, 21);
             this.cmbPrivilegio.TabIndex = 16;
-            this.cmbPrivilegio.ValueMember = "idPrivilegio";
+            this.cmbPrivilegio.ValueMember = "Codigo";
             // 
             // btnLimpar
             // 
@@ -225,7 +225,6 @@
             // 
             // btnListar
             // 
-            this.btnListar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnListar.Location = new System.Drawing.Point(360, 153);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
@@ -257,7 +256,7 @@
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.cmbPrivilegio);
             this.Controls.Add(this.SenhaTextBox);
-            this.Controls.Add(this.loginTextBox);
+            this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.EnderecoTextBox);
             this.Controls.Add(this.TelefoneTextBox);
             this.Controls.Add(this.CPFTextBox);
@@ -273,6 +272,7 @@
             this.Controls.Add(this.labelUsuario);
             this.Name = "UsuarioForm";
             this.Text = "UsuarioForm";
+            this.Load += new System.EventHandler(this.UsuarioForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -294,7 +294,7 @@
         private System.Windows.Forms.TextBox CPFTextBox;
         private System.Windows.Forms.TextBox TelefoneTextBox;
         private System.Windows.Forms.TextBox EnderecoTextBox;
-        private System.Windows.Forms.TextBox loginTextBox;
+        private System.Windows.Forms.TextBox LoginTextBox;
         private System.Windows.Forms.TextBox SenhaTextBox;
         private System.Windows.Forms.ComboBox cmbPrivilegio;
         private System.Windows.Forms.Button btnLimpar;

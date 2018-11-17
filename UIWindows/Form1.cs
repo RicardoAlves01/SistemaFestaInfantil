@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UIWindows;
 
 namespace FestaInfantil.UIWindows
 {
@@ -20,6 +21,13 @@ namespace FestaInfantil.UIWindows
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsuarioForm obj = new UsuarioForm();
+            obj.MdiParent = this;
+            obj.Show();
         }
     }
 }
