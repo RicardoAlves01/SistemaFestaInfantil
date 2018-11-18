@@ -44,7 +44,7 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1035, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,32 +63,32 @@
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // aluguelToolStripMenuItem
             // 
             this.aluguelToolStripMenuItem.Name = "aluguelToolStripMenuItem";
-            this.aluguelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aluguelToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.aluguelToolStripMenuItem.Text = "Aluguel";
             // 
             // temaToolStripMenuItem
             // 
             this.temaToolStripMenuItem.Name = "temaToolStripMenuItem";
-            this.temaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.temaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.temaToolStripMenuItem.Text = "Tema";
             // 
             // itensDoTemaToolStripMenuItem
             // 
             this.itensDoTemaToolStripMenuItem.Name = "itensDoTemaToolStripMenuItem";
-            this.itensDoTemaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.itensDoTemaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.itensDoTemaToolStripMenuItem.Text = "ItensDoTema";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1035, 570);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;

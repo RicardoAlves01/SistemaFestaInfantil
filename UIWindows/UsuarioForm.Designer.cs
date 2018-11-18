@@ -225,6 +225,7 @@
             this.btnExcluir.TabIndex = 20;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnListar
             // 
@@ -234,6 +235,7 @@
             this.btnListar.TabIndex = 21;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // usuariosDataGridView
             // 
@@ -243,7 +245,7 @@
             this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usuariosDataGridView.Location = new System.Drawing.Point(23, 200);
             this.usuariosDataGridView.Name = "usuariosDataGridView";
-            this.usuariosDataGridView.Size = new System.Drawing.Size(765, 238);
+            this.usuariosDataGridView.Size = new System.Drawing.Size(937, 299);
             this.usuariosDataGridView.TabIndex = 22;
             this.usuariosDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usuariosDataGridView_CellClick);
             // 
@@ -251,7 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(972, 511);
             this.Controls.Add(this.usuariosDataGridView);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnExcluir);

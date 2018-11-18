@@ -159,17 +159,48 @@ namespace UIWindows
 
             SenhaTextBox.Text = usuariosDataGridView[7, usuariosDataGridView.CurrentRow.Index].Value.ToString();
 
+            //######################################################################################################################
+
+            //Quero que ao clicar na celula do grid tbm troque o combobox falando se o usuario selecionado é ADM ou Cliente
+            //Porém não é prioridade agora.
+
+            //#######################################################################################################################
+
+            //cmbPrivilegio.Items.Add(dgvQuartos[0, dgvQuartos.CurrentRow.Index].Value.ToString());
+
             //Usuario usuario = new Usuario();
             //cmbPrivilegio.Text = usuario.Privilegio=;
+        }
 
-            
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (UsuarioTextBox.Text.Length == 0)
+            {
+                MessageBox.Show("Um usuario deve ser selecionado antes da exclusão.");
+            }
 
-            //usuario.Nome = NomeTextBox.Text;
-            //usuario.Cpf = CPFTextBox.Text;
-            //usuario.Telefone = TelefoneTextBox.Text;
-            //usuario.Privilegio = (int)cmbPrivilegio.SelectedValue;
-            //usuario.Endereco = EnderecoTextBox.Text;
+            else
+                try
+                {
+                    int codigo = Convert.ToInt32(UsuarioTextBox.Text);
 
+                    UsuarioBll obj = new UsuarioBll();
+
+                    obj.Excluir(codigo);
+
+                    MessageBox.Show("O usuario foi excluído com sucesso!");
+
+                    AtualizaGrid();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            AtualizaGrid();
         }
     }
 }
