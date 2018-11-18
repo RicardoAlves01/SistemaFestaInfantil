@@ -67,7 +67,7 @@ namespace FestaInfantil.Dal
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update TbUsuario set TbPrivilegio_idPrivilegio = @idPrivilegio, nome = @nomeUsuario, cpf = @cpf, " +
+                cmd.CommandText = "update TbUsuario set TbPrivilegio_idPrivilegio = @idPrivilegio, nomeUsuario = @nomeUsuario, cpf = @cpf, " +
                "telefone = @telefone, endereco = @endereco, login = @login, senha = @senha where idUsuario = @idUsuario;";
 
                 cmd.Parameters.AddWithValue("@idPrivilegio", usuario.Privilegio);

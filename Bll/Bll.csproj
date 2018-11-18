@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AluguelBll.cs" />
+    <Compile Include="ItensTemaBll.cs" />
+    <Compile Include="TemaBll.cs" />
     <Compile Include="UsuarioBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

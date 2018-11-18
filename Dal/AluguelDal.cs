@@ -27,8 +27,8 @@ namespace FestaInfantil.Dal
                 //command
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "insert into TbAluguel(TbUsuario_idUsuario, TbTema_idTema,enderecoUsuario,dataFesta,horaInicio, horaFim, numeroPessoas, temaFesta, valorAluguel)" +
-                " values (@idUsuario, @idTema, @enderecoUsuario, @dataFesta, @horaInicio, @horaFim, @numeroPessoas, @temaFesta, @valorAlguel); select @@IDENTITY;";
+                cmd.CommandText = "insert into TbAluguel(TbUsuario_idUsuario, TbTema_idTema,enderecoUsuario,dataFesta,horaInicio, horaFim, numeroPessoas, valorAluguel)" +
+                " values (@idUsuario, @idTema, @enderecoUsuario, @dataFesta, @horaInicio, @horaFim, @numeroPessoas, @valorAlguel); select @@IDENTITY;";
 
                 cmd.Parameters.AddWithValue("@idUsuario", aluguel.IdUsuario);
                 cmd.Parameters.AddWithValue("@idTema", aluguel.IdTema);
@@ -37,7 +37,6 @@ namespace FestaInfantil.Dal
                 cmd.Parameters.AddWithValue("@horaInicio", aluguel.HoraInicio);
                 cmd.Parameters.AddWithValue("@horaFim", aluguel.HoraFim);
                 cmd.Parameters.AddWithValue("@numeroPessoas", aluguel.NumeroPessoas);
-                cmd.Parameters.AddWithValue("@temaFesta", aluguel.TemaFesta);
                 cmd.Parameters.AddWithValue("@valorAlguel", aluguel.ValorAluguel);
 
                 cn.Open();
@@ -73,7 +72,7 @@ namespace FestaInfantil.Dal
                 //DÚVIDA, TENHO QUE PASSAR NO UPDATE AS CHAVES ESTRANGEIRAS IDALUGUEL E IDTEMA OU NÃO?
 
                 cmd.CommandText = "update TbAluguel set TbUsuario_idUsuario = @idUsuario, TbTema_idTema = @idTema, enderecoUsuario = @enderecoUsuario, " +
-                "dataFesta = @dataFesta, horaInicio = @horaInicio, numeroPessoas = @numeroPessoas, temaFesta = @temaFesta, valorAluguel = @valorAlguel where idAluguel = @idAluguel;";
+                "dataFesta = @dataFesta, horaInicio = @horaInicio, numeroPessoas = @numeroPessoas, valorAluguel = @valorAlguel where idAluguel = @idAluguel;";
 
                 cmd.Parameters.AddWithValue("@idUsuario", aluguel.IdUsuario);
                 cmd.Parameters.AddWithValue("@idTema", aluguel.IdTema);
@@ -82,7 +81,6 @@ namespace FestaInfantil.Dal
                 cmd.Parameters.AddWithValue("@horaInicio", aluguel.HoraInicio);
                 cmd.Parameters.AddWithValue("@horaFim", aluguel.HoraFim);
                 cmd.Parameters.AddWithValue("@numeroPessoas", aluguel.NumeroPessoas);
-                cmd.Parameters.AddWithValue("@temaFesta", aluguel.TemaFesta);
                 cmd.Parameters.AddWithValue("@valorAlguel", aluguel.ValorAluguel);
                 cmd.Parameters.AddWithValue("@idAluguel", aluguel.IdAluguel);
 
