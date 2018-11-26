@@ -25,10 +25,6 @@ namespace FestaInfantil.Bll
         {
             //O nome do usuario é obrigatório
             //trim retira espaços a esquerda e a direita
-            if (tema.IdTema.ToString().Length == 0)
-            {
-                throw new Exception("O Codigo do Tema é obrigatório");
-            }
             if (tema.TemaFesta.Trim().Length == 0)
             {
                 throw new Exception("A descrição do tema é obrigatório");

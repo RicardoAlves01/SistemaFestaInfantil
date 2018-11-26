@@ -62,7 +62,7 @@ namespace FestaInfantil.Dal
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.Text;
 
-                cmd.CommandText = "update Clientes set temaFesta = @temaFesta, corToalhaMesa = @corToalhaMesa where idTema = @idTema;";
+                cmd.CommandText = "update TbTema set temaFesta = @temafesta, corToalhaMesa = @corToalhaMesa where idTema = @idTema;";
 
                 cmd.Parameters.AddWithValue("@idTema", tema.IdTema);
                 cmd.Parameters.AddWithValue("@temafesta", tema.TemaFesta);
@@ -134,9 +134,16 @@ namespace FestaInfantil.Dal
 
         public DataTable Listagem()
         {
+            SqlConnection cn = new SqlConnection();
+            cn.ConnectionString = Dados.StringDeConexao;
+            cn.Open();
+            
+
+            SqlDataAdapter da = new SqlDataAdapter("select * from TbTema", cn);
+
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select * from TbTema", Dados.StringDeConexao);
             da.Fill(tabela);
+            cn.Close();
             return tabela;
         }
     }

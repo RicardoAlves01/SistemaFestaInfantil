@@ -12,11 +12,11 @@ namespace FestaInfantil.Models
         private int idUsuario;
         private int idTema;
         private string enderecoUsuario;
-        private DateTime dataFesta;
+        private string dataFesta;
         private string horaInicio;
         private string horaFim;
         private int numeroPessoas;
-        //private string temaFesta;
+        ////private string temaFesta;
         private float valorAluguel;
 
         //construtores
@@ -24,7 +24,7 @@ namespace FestaInfantil.Models
         {
         }
 
-        public Aluguel(int idAluguel, int idUsuario, int idTema, string enderecoUsuario, DateTime dataFesta, string horaInicio, string horaFim, int numeroPessoas, float valorAluguel)
+        public Aluguel(int idAluguel, int idUsuario, int idTema, string enderecoUsuario, string dataFesta, string horaInicio, string horaFim, int numeroPessoas, float valorAluguel)
         {
             this.idAluguel = idAluguel;
             this.idUsuario = idUsuario;
@@ -84,7 +84,7 @@ namespace FestaInfantil.Models
             set { horaInicio = value; }
         }
 
-        public DateTime DataFesta
+        public string DataFesta
         {
             get { return dataFesta; }
             set { dataFesta = value; }

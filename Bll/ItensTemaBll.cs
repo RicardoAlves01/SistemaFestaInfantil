@@ -72,6 +72,12 @@ namespace FestaInfantil.Bll
             ItensTemaDal obj = new ItensTemaDal();
             return obj.Listagem();
         }
+        //Lista os temas no ComboBox
+        public DataTable ListagemTema()
+        {
+            ItensTemaDal obj = new ItensTemaDal();
+            return obj.ListagemTema();
+        }
     }
 }
 

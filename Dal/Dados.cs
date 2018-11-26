@@ -12,7 +12,7 @@ namespace FestaInfantil.Dal
         {
             get
             {
-                return "Data Source=DESKTOP-V02ORJ2\\SQLEXPRESS01;Initial Catalog=FestaInfantilBD;Integrated Security=True";
+                return "Data Source=DESKTOP-V02ORJ2\\SQLEXPRESS01;Initial Catalog=BDSistemaFestaInfantil;Integrated Security=True";
             }
         }
     }

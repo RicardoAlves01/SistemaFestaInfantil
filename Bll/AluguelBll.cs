@@ -92,6 +92,18 @@ namespace FestaInfantil.Bll
             AluguelDal obj = new AluguelDal();
             return obj.Listagem();
         }
+
+        public DataTable ListagemCliente()
+        {
+            AluguelDal obj = new AluguelDal();
+            return obj.ListagemCliente();
+        }
+
+        public DataTable ListagemTema()
+        {
+            AluguelDal obj = new AluguelDal();
+            return obj.ListagemTema();
+        }
     }
 }
 

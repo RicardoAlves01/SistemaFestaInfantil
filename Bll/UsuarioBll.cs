@@ -41,11 +41,11 @@ namespace FestaInfantil.Bll
                 {
                     throw new Exception("O endereço do usuario é obrigatório");
                 }
-                if (usuario.Login.Trim().Length == 0)
+                if (usuario.Privilegio != 3 && usuario.Login.Trim().Length == 0)
                 {
                     throw new Exception("O login do usuario é obrigatório");
                 }
-                if (usuario.Senha.Trim().Length == 0)
+                if (usuario.Privilegio != 3 && usuario.Senha.Trim().Length == 0)
                 {
                     throw new Exception("A senha do usuario é obrigatória");
                 }

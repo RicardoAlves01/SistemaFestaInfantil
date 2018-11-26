@@ -67,6 +67,8 @@ namespace FestaInfantil.Dal
                 cmd.Parameters.AddWithValue("@idTema", itensTema.IdTema);
                 cmd.Parameters.AddWithValue("@nomeDoItem", itensTema.Nomeitem);
                 cmd.Parameters.AddWithValue("@valorDoItem", itensTema.ValorItem);
+                cmd.Parameters.AddWithValue("@idItensTema", itensTema.IdItensTema);
+
 
                 cn.Open();
 
@@ -75,7 +77,7 @@ namespace FestaInfantil.Dal
 
             catch (SqlException ex)
             {
-                throw new Exception("Servidor SQL Erro:" + ex.Number);
+                throw new Exception("Servidor SQL Erro:" + ex.ToString());
             }
 
             catch (Exception ex)
@@ -136,6 +138,14 @@ namespace FestaInfantil.Dal
         {
             DataTable tabela = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("select * from TbItensTema", Dados.StringDeConexao);
+            da.Fill(tabela);
+            return tabela;
+        }
+
+        public DataTable ListagemTema()
+        {
+            DataTable tabela = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select * from TbTema", Dados.StringDeConexao);
             da.Fill(tabela);
             return tabela;
         }

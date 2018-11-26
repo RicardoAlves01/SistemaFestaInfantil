@@ -72,7 +72,7 @@ namespace FestaInfantil.Dal
                 //DÚVIDA, TENHO QUE PASSAR NO UPDATE AS CHAVES ESTRANGEIRAS IDALUGUEL E IDTEMA OU NÃO?
 
                 cmd.CommandText = "update TbAluguel set TbUsuario_idUsuario = @idUsuario, TbTema_idTema = @idTema, enderecoUsuario = @enderecoUsuario, " +
-                "dataFesta = @dataFesta, horaInicio = @horaInicio, numeroPessoas = @numeroPessoas, valorAluguel = @valorAlguel where idAluguel = @idAluguel;";
+                "dataFesta = @dataFesta, horaInicio = @horaInicio, horaFim = @horaFim, numeroPessoas = @numeroPessoas, valorAluguel = @valorAlguel where idAluguel = @idAluguel;";
 
                 cmd.Parameters.AddWithValue("@idUsuario", aluguel.IdUsuario);
                 cmd.Parameters.AddWithValue("@idTema", aluguel.IdTema);
@@ -152,6 +152,22 @@ namespace FestaInfantil.Dal
         {
             DataTable tabela = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("select * from TbAluguel", Dados.StringDeConexao);
+            da.Fill(tabela);
+            return tabela;
+        }
+
+        public DataTable ListagemCliente()
+        {
+            DataTable tabela = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select * from TbUsuario", Dados.StringDeConexao);
+            da.Fill(tabela);
+            return tabela;
+        }
+
+        public DataTable ListagemTema()
+        {
+            DataTable tabela = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select * from TbTema", Dados.StringDeConexao);
             da.Fill(tabela);
             return tabela;
         }
